@@ -20,10 +20,10 @@ module ApplicationHelper
 		if authorize
 			authorize exe, :update?
 		end
+	
+		exe.update!(data)
 		
 		exe.image_derivatives! if exe.image.present?
-
-		exe.update!(data)
 	end
 
 	# Delete data
