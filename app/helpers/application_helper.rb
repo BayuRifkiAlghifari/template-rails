@@ -8,6 +8,8 @@ module ApplicationHelper
 			authorize exe, :create?
 		end
 
+		exe.image_derivatives! if exe.image.present?
+
 		exe.save!
 	end
 
@@ -18,6 +20,8 @@ module ApplicationHelper
 		if authorize
 			authorize exe, :update?
 		end
+		
+		exe.image_derivatives! if exe.image.present?
 
 		exe.update!(data)
 	end
