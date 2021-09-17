@@ -31,6 +31,7 @@ gem 'ajax-datatables-rails'
 gem 'rolify'
 gem 'pundit'
 gem 'shrine', '~> 3.0'
+gem 'figaro'
 
 
 group :development, :test do
